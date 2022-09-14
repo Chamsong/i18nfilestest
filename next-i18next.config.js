@@ -33,7 +33,7 @@ module.exports = {
         useSuspense: true,
     },
     backend: {
-        loadPath: 'http://localhost:3001/locales/{{lng}}/{{ns}}.json',
+        loadPath: 'http://localhost:3000/locales/{{lng}}/{{ns}}.json',
         requestOptions: {
             cache: 'default',
             credentials: 'same-origin',
