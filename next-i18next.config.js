@@ -32,14 +32,14 @@ module.exports = {
     react: {
         useSuspense: true,
     },
-    backend: {
-        loadPath: 'http://localhost:3000/locales/{{lng}}/{{ns}}.json',
+    backend: isBrowser ? {
+        loadPath: 'http://localhost:3000/api/{{ns}}/{{lng}}',
         requestOptions: {
             cache: 'default',
             credentials: 'same-origin',
             mode: 'no-cors',
-        },
-    },
+        } ,
+    } : undefined,
     serializeConfig: false,
     use: isBrowser ? [I18NextHttpBackend] : [],
 }
